@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background: #a1ffff87;
+}
+
+body > h2 {
+    margin-top: 10px;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 35px;
+    color: dark-blue;
+}
+
+.field {
+    display: flex;
+    margin: 0 auto;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    border: 8px double green;
+    width: 456px;
+    border-radius: 50px;
+    position: relative;
+}
+
+.field > .cell {
+    height: 150px;
+    width: 150px;
+    transition: background-color 150ms linear;
+
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cell > img {
+    width: 100px;
+}
+
+.finish .field {
+    filter: blur(8px);
+}
+.finish-text {
+    display: none;
+    position: absolute;
+    font-family: sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    top: 30%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.finish .finish-text {
+    display: block;
+}
+
+.field > .cell:nth-child(1) {
+    border-radius: 42px 0 0 0;
+}
+
+.field > .cell:nth-child(3) {
+    border-radius: 0 42px 0 0;
+}
+
+.field > .cell:nth-child(7) {
+    border-radius: 0 0 0 42px;
+}
+
+.field > .cell:nth-child(9) {
+    border-radius: 0 0 42px 0;
+}
+
+.field > .cell:hover {
+    background-color: rgba(0, 0, 0, .3);
+}
+
+.side-text {
+    position: absolute;
+    box-sizing: border-box;
+    left: 0;
+    top: 0;
+    transform: translateX(-100%);
+    padding: 30px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
